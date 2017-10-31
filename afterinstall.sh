@@ -61,8 +61,7 @@ sudo apt-get update
 # install necessary
 sudo apt-get install software-properties-common vim-nox git zsh indicator-multiload vlc ubuntu-restricted-extras tmux compizconfig-settings-manager compiz-plugins-extra libappindicator1 python-pip htop deluge colormake xsel synaptic openssh-client openssh-server shutter curl $toinstall -V -y
 sudo apt-get purge `dpkg -l | grep unity-lens | grep -v unity-lens-files | grep -v unity-lens-applications | awk '{print $2}'` -y
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
+sudo apt-get upgrade -y &&  sudo apt-get dist-upgrade -y
 
 # install chrome with dependencies
 echo -e "$COL_YELLOW" && read -p "Are you sure to install google-chrome? " -n 1 -r ; echo -e "$COL_RESET"
