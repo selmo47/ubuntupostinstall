@@ -236,3 +236,18 @@ set mouse=a
 "let g:gitgutter_enabled = 0
 let g:gitgutter_highlight_lines = 1
 nmap <Leader>g :GitGutterToggle<CR>
+
+" Syntastic.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_phpcs_disable = 1
+let g:syntastic_phpmd_disable = 1
+let g:syntastic_php_checkers = ['php']
+let g:syntastic_quiet_messages = { "type": "style" }
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_auto_jump = 2
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
